@@ -4,8 +4,8 @@ import pickle
 
 app = Flask(__name__)
 filename = 'file_iris.pkl'
-model = pickle.load(open(filename, 'rb’))    # load the model
 
+model = joblib.load(filename)
 @app.route('/')
 def index():
     return render_template('index.html’)
