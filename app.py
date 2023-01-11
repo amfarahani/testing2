@@ -4,7 +4,7 @@ import pickle
 import joblib
 
 app = Flask(__name__)
-filename = 'file_iris.pkl'
+filename = 'file_iris_1.pkl'
 
 model = joblib.load(filename)
 @app.route('/')
