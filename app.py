@@ -5,8 +5,8 @@ import joblib
 
 app = Flask(__name__)
 filename='FarahaniIris.pkl'
-
-model = pickle.load(open(filename, 'rb'))    # load the model
+model = joblib.load(filename)
+#model = pickle.load(open(filename, 'rb'))    # load the model
 @app.route('/')
 def index():
     return render_template('index.html')
