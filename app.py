@@ -10,7 +10,7 @@ model = joblib.load(filename)
 def index():
     return render_template('index.html')
 
-@app.route('/predict', methods=['POST’])  # The user input is processed here
+@app.route('/predict', methods=['POST'])  # The user input is processed here
 def predict():
     Sepal_Length = request.form['sepal_length']
     Sepal_Width = request.form['sepal_width']
