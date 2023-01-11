@@ -8,7 +8,7 @@ filename = 'file_iris.pkl'
 model = joblib.load(filename)
 @app.route('/')
 def index():
-    return render_template('index.html’)
+    return render_template('index.html')
 
 @app.route('/predict', methods=['POST’])  # The user input is processed here
 def predict():
